@@ -60,10 +60,10 @@ To test the entire stack, run:
 ```
 bash
 docker-compose build
-docker-compose -d up
-sleep 10 # give the database server enough time to start!
-cd integration-test && npm start && cd ..
-docker-compose -d down
+docker-compose -d up    #Remove -d if running in windows
+sleep 10                #Give the database server enough time to start!
+cd integration-test && npm start && cd .. 
+docker-compose -d down  #Remove -d if running in windows
 ```
 
 # Manual Test
