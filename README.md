@@ -21,7 +21,8 @@ docker-machine env --shell cmd                                      #Optional: R
 
 To start or stop the test database, build the test-database image and run it:
 
-```bash
+```
+bash
 cd ./test-database
 docker build -t test-database .
 docker run --name mysql -it -p 3306:3306 test-database #Runs interactive
@@ -30,7 +31,8 @@ docker run --name mysql -d -p 3306:3306 test-database #Runs in background
 
 Some commands for working with the test server:
 
-```bash
+```
+bash
 cd ./users-service
 npm install         # setup everything
 npm test            # unit test - no need for a test database running
@@ -41,7 +43,8 @@ npm run lint        # check to see if the code is beautiful
 
 You can also run the test server in its own container:
 
-```bash
+```
+bash
 docker build -t users-service .
 docker run -it -p 8123:8123 --link db:db -e DATABASE_HOST=DB users-service
 ```
@@ -50,7 +53,8 @@ docker run -it -p 8123:8123 --link db:db -e DATABASE_HOST=DB users-service
 
 To test the entire stack, run:
 
-```bash
+```
+bash
 docker-compose build
 docker-compose -d up
 sleep 10 # give the database server enough time to start!
