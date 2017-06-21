@@ -73,4 +73,7 @@ http://localhost:8123/search
 #If users-service is running on server
 http://DOCKER_IP_ADDRESS:8123/users
 http://DOCKER_IP_ADDRESS:8123/search
+
+#Docker Service Test
+docker exec -it users-service npm test --prefix /app
 ```
