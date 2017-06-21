@@ -9,11 +9,15 @@ This is a companion project to my article on '[Learn Docker by building a Micros
 You must have Docker installed for this code to work! Check the [Installation Guide](https://docs.docker.com/engine/installation/) if you haven't got it installed.
 
 # If using windows
-```CMD
-@FOR /f "tokens=*" %i IN ('docker-machine env --shell cmd') DO @%i  #Run this to set the docker env vars
-docker-machine start                                                #Run this if docker isn't started yet
-docker ps                                                           #Make sure you dont get any errors when you run this
-docker-machine env --shell cmd                                      #Optional: Run this to see what happened behind that for loop```
+CMD
+```@FOR /f "tokens=*" %i IN ('docker-machine env --shell cmd') DO @%i```  #Run this to set the docker env vars
+
+```docker-machine start```                                                #Run this if docker isn't started yet
+
+```docker ps```                                                           #Make sure you dont get any errors when you run this
+
+```docker-machine env --shell cmd```                                      #Optional: Run this to see what happened behind that for loop
+
 
 # MySQL
 If MySQL is not installed locally then run this:
@@ -35,7 +39,7 @@ Some commands for working with the test server:
 ```bash
 cd ./users-service
 npm install         # setup everything
-npm test 			      # unit test - no need for a test database running
+npm test            # unit test - no need for a test database running
 npm start           # run the server - you must have a test database running
 npm run debug       # run the server in debug mode, opens a browser with the inspector
 npm run lint        # check to see if the code is beautiful
