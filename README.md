@@ -47,7 +47,7 @@ You can also run the test server in its own container (you must run it like this
 ```
 bash
 docker build -t users-service .
-docker run -it -p 8123:8123 --link mysqldb:mysqldb -e DATABASE_HOST=mysqldb users-service
+docker run --name test-server -it -p 8123:8123 --link mysqldb:mysqldb -e DATABASE_HOST=mysqldb users-service
 ```
 
 # Integration Testing
