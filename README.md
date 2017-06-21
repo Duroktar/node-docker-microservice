@@ -66,5 +66,9 @@ docker-compose -d down
 # Manual Test
 ```
 In browser goto 
-http://localhost:8123/users           #If users-service is running locally
-http://DOCKER IP ADDRESS:8123/users   #If users-service is running on server
+http://localhost:8123/users             #If users-service is running locally
+http://DOCKER_IP_ADDRESS:8123/users     #If users-service is running on server
+
+http://localhost:8123/search            #If users-service is running locally
+http://DOCKER_IP_ADDRESS:8123/search    #If users-service is running on server
+```
