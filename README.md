@@ -25,8 +25,8 @@ To start or stop the test database, build the test-database image and run it:
 bash
 cd ./test-database
 docker build -t test-database .
-docker run --name mysql -it -p 3306:3306 test-database #Runs interactive
-docker run --name mysql -d -p 3306:3306 test-database #Runs in background
+docker run --name mysql -it -p 3306:3306 test-database    #Runs interactive
+#docker run --name mysql -d -p 3306:3306 test-database    #Runs in background
 ```
 
 Some commands for working with the test server:
