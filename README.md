@@ -47,7 +47,7 @@ You can also run the test server in its own container (you must run it like this
 ```
 bash
 docker build -t users-service .
-docker run --name test-server -it -p 8123:8123 --link mysqldb:mysqldb -e DATABASE_HOST=mysqldb users-service
+docker run --name users-service -it -p 8123:8123 --link mysqldb:mysqldb -e DATABASE_HOST=mysqldb users-service
 ```
 
 # Integration Testing
@@ -62,3 +62,9 @@ sleep 10 # give the database server enough time to start!
 cd integration-test && npm start && cd ..
 docker-compose -d down
 ```
+
+# Manual Test
+```
+In browser goto 
+http://localhost:8123/users           #If users-service is running locally
+http://DOCKER IP ADDRESS:8123/users   #If users-service is running on server
