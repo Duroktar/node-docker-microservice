@@ -8,6 +8,13 @@ This is a companion project to my article on '[Learn Docker by building a Micros
 
 You must have Docker installed for this code to work! Check the [Installation Guide](https://docs.docker.com/engine/installation/) if you haven't got it installed.
 
+# If using windows
+In CMD run the follwing command:
+```@FOR /f "tokens=*" %i IN ('docker-machine env --shell cmd') DO @%i```
+Run this if docker isn't started yet: ```docker-machine start```
+Then make sure you dont get any errors when you run: ```docker ps```
+Optional: Run this to see what happened behind that for loop: ```docker-machine env --shell cmd```
+
 # Coding
 
 To start or stop the test database, build the test-database image and run it:
