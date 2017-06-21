@@ -30,7 +30,7 @@ docker run --name mysqldb -it -p 3306:3306 test-database    #Runs interactive
 #docker run --name mysqldb -d -p 3306:3306 test-database    #Runs in background
 ```
 
-Some commands for working with the test server:
+Some commands for working with the test server (if mysql is running in a docker container then skip this section):
 
 ```
 bash
