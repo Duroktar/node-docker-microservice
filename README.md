@@ -33,7 +33,7 @@ docker run --name mysqldb -it -p 3306:3306 test-database    #Runs interactive
 Some commands for working with the test server:
 
 ```
-#!/bin/sh
+bash
 cd ./users-service
 npm install         # setup everything
 npm test            # unit test - no need for a test database running
