@@ -10,13 +10,14 @@ You must have Docker installed for this code to work! Check the [Installation Gu
 
 # If using windows
 CMD
-```@FOR /f "tokens=*" %i IN ('docker-machine env --shell cmd') DO @%i```  #Run this to set the docker env vars
 
-```docker-machine start```                                                #Run this if docker isn't started yet
+````@FOR /f "tokens=*" %i IN ('docker-machine env --shell cmd') DO @%i```  #Run this to set the docker env vars`
 
-```docker ps```                                                           #Make sure you dont get any errors when you run this
+````docker-machine start```                                                #Run this if docker isn't started yet`
 
-```docker-machine env --shell cmd```                                      #Optional: Run this to see what happened behind that for loop
+````docker ps```                                                           #Make sure you dont get any errors when you run this`
+
+````docker-machine env --shell cmd```                                      #Optional: Run this to see what happened behind that for loop`
 
 
 # MySQL
