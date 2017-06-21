@@ -17,11 +17,6 @@ docker ps                                                           #Make sure y
 docker-machine env --shell cmd                                      #Optional: Run this to see what happened behind that for loop
 ```
 
-
-# MySQL
-If MySQL is not installed locally then run this:
-```docker run --name db -d -e MYSQL_ROOT_PASSWORD=123 -p 3306:3306 mysql:latest```
-
 # Coding
 
 To start or stop the test database, build the test-database image and run it:
