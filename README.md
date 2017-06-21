@@ -40,6 +40,9 @@ npm test            # unit test - no need for a test database running
 npm start           # run the server - you must have a test database running
 npm run debug       # run the server in debug mode, opens a browser with the inspector
 npm run lint        # check to see if the code is beautiful
+
+#Docker Service Test
+docker exec -it users-service npm test --prefix /app
 ```
 
 You can also run the test server in its own container (you must run it like this if mysql is also in a docker container):
@@ -73,7 +76,4 @@ http://localhost:8123/search
 #If users-service is running on server
 http://DOCKER_IP_ADDRESS:8123/users
 http://DOCKER_IP_ADDRESS:8123/search
-
-#Docker Service Test
-docker exec -it users-service npm test --prefix /app
 ```
